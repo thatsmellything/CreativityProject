@@ -26,8 +26,8 @@
                                     <segue destination="XY1-ZL-hng" kind="show" id="tgg-Lm-XgF"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b6c-fh-2W0">
-                                <rect key="frame" x="67" y="116" width="240" height="276"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b6c-fh-2W0" userLabel="Drawing View" customClass="DrawingView" customModule="CreativityProject" customModuleProvider="target">
+                                <rect key="frame" x="67" y="116" width="240" height="344"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.26588775458000824" green="0.35420026049273379" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
