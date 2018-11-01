@@ -16,7 +16,8 @@ public class CreativityViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
+   public override func didReceiveMemoryWarning() -> Void
+   {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
