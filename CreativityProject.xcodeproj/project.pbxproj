@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB51893E2195E2A200F4DCAE /* ArtCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB51893D2195E2A200F4DCAE /* ArtCollectionViewController.swift */; };
 		FB70F3D3218B3C4F008B9357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70F3D2218B3C4F008B9357 /* AppDelegate.swift */; };
 		FB70F3D5218B3C4F008B9357 /* CreativityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70F3D4218B3C4F008B9357 /* CreativityViewController.swift */; };
 		FB70F3D8218B3C4F008B9357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB70F3D6218B3C4F008B9357 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB51893D2195E2A200F4DCAE /* ArtCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCollectionViewController.swift; sourceTree = "<group>"; };
 		FB70F3CF218B3C4F008B9357 /* CreativityProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreativityProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB70F3D2218B3C4F008B9357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB70F3D4218B3C4F008B9357 /* CreativityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreativityViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				FB70F3D4218B3C4F008B9357 /* CreativityViewController.swift */,
+				FB51893D2195E2A200F4DCAE /* ArtCollectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			files = (
 				FB70F3E8218B4B54008B9357 /* DrawingView.swift in Sources */,
 				FB70F3D5218B3C4F008B9357 /* CreativityViewController.swift in Sources */,
+				FB51893E2195E2A200F4DCAE /* ArtCollectionViewController.swift in Sources */,
 				FB70F3D3218B3C4F008B9357 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
