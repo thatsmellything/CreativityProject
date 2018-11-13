@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FB51893E2195E2A200F4DCAE /* ArtCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB51893D2195E2A200F4DCAE /* ArtCollectionViewController.swift */; };
 		FB70F3D3218B3C4F008B9357 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70F3D2218B3C4F008B9357 /* AppDelegate.swift */; };
-		FB70F3D5218B3C4F008B9357 /* CreativityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70F3D4218B3C4F008B9357 /* CreativityViewController.swift */; };
+		FB70F3D5218B3C4F008B9357 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB70F3D4218B3C4F008B9357 /* DrawingViewController.swift */; };
 		FB70F3D8218B3C4F008B9357 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB70F3D6218B3C4F008B9357 /* Main.storyboard */; };
 		FB70F3DA218B3C54008B9357 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB70F3D9218B3C54008B9357 /* Assets.xcassets */; };
 		FB70F3DD218B3C54008B9357 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB70F3DB218B3C54008B9357 /* LaunchScreen.storyboard */; };
@@ -20,7 +20,7 @@
 		FB51893D2195E2A200F4DCAE /* ArtCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtCollectionViewController.swift; sourceTree = "<group>"; };
 		FB70F3CF218B3C4F008B9357 /* CreativityProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CreativityProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB70F3D2218B3C4F008B9357 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FB70F3D4218B3C4F008B9357 /* CreativityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreativityViewController.swift; sourceTree = "<group>"; };
+		FB70F3D4218B3C4F008B9357 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		FB70F3D7218B3C4F008B9357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FB70F3D9218B3C54008B9357 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB70F3DC218B3C54008B9357 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		FB70F3E4218B3CFF008B9357 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FB70F3D4218B3C4F008B9357 /* CreativityViewController.swift */,
+				FB70F3D4218B3C4F008B9357 /* DrawingViewController.swift */,
 				FB51893D2195E2A200F4DCAE /* ArtCollectionViewController.swift */,
 			);
 			path = Controller;
@@ -166,7 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB70F3E8218B4B54008B9357 /* DrawingView.swift in Sources */,
-				FB70F3D5218B3C4F008B9357 /* CreativityViewController.swift in Sources */,
+				FB70F3D5218B3C4F008B9357 /* DrawingViewController.swift in Sources */,
 				FB51893E2195E2A200F4DCAE /* ArtCollectionViewController.swift in Sources */,
 				FB70F3D3218B3C4F008B9357 /* AppDelegate.swift in Sources */,
 			);

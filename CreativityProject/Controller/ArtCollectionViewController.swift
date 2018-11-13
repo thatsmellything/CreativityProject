@@ -1,12 +1,12 @@
-//
-//  ArtCollectionViewController.swift
-//  CreativityProject
-//
-//  Created by Judkins, Jensen on 11/9/18.
-//  Copyright © 2018 Judkins, Jensen. All rights reserved.
-//
+////
+////  ArtCollectionViewController.swift
+////  CreativityProject
+////
+////  Created by Judkins, Jensen on 11/9/18.
+////  Copyright © 2018 Judkins, Jensen. All rights reserved.
+////
 
-        import Foundation
+        import UIKit
 
         private let reuseIdentifier = "artIdentifier"
         public class ArtCollectionViewController: UICollectionViewController
@@ -20,22 +20,28 @@
         private let creativeCS : [UIImage?] =
         {
         return [
-        UIImage(named: "octocat")]
+        UIImage(named: "octocat"),
+        UIImage(named: "deer"),
+        UIImage(named: "boba"),
+        UIImage(named: "JensenJavaHaiku"),
+        UIImage(named: "JensenMainFrameHaiku"),
+        UIImage(named: "medhack"),
+        UIImage(named: "smokeart"),
+        UIImage(named: "Xcode")
+            ]
         }()
 
         private let labels : [String] =
         {
         return [
-        "This",
-        "needs",
-        "to",
-        "be",
-        "one",
-        "to",
-        "one",
-        "with",
-        "creativeCS",
-        "above"
+            "octocat",
+            "deer",
+            "boba",
+            "JensenJavaHaiku",
+            "JensenMainFrameHaiku",
+            "medhack",
+            "smokeart",
+            "Xcode"
         ]
         }()
 
@@ -48,62 +54,67 @@
         public override func viewDidLoad() -> Void
         {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
+            // do any additional setup after loading the view
         }
-        //MARK: - Navigation
+            // MARK: - Navigation / Layout
+            public override func numberOfSections(in collectionView: UICollectionView)->Int
+            {
+                return 1
+            }
+            public override func collectionView(_ collectionView:UICollectionView, numberOfItemsInSection section: Int) -> Int
+            {
+                return creativeCS.count
+            }
+            //MARK: UICollectionViewDataSource
+            
+            public override func collectionView(_ collectionView: UICollectionView,
+                                                cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+            {
+                let artCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ArtCell
+                
+                artCell.backgroundColor = .purple
+                artCell.artImage.image = creativeCS[indexPath.row]
+                artCell.artLabel.text = labels[indexPath.row]
+                
+                return artCell
+            }
+            
+            //MARK: UICollectionViewDelegate
+            public func collectionView(_ collectionView:UICollectionView,
+                                       layout collectionViewLayout: UICollectionViewLayout,
+                                       sizeForItemAt indexPath: IndexPath) -> CGSize
+            {
+                let paddingSpace = sectionInsets.left * (itemsPerRowCompact + 1)
+                let availableWidth = view.frame.width - paddingSpace
+                let widthPerItem = availableWidth / itemsPerRowCompact
+                return CGSize(width: widthPerItem, height: widthPerItem)
+                
+            }
+            public func collectionView(_ collectionView: UICollectionView,
+                                       layout collectionViewLayout: UICollectionViewLayout,
+                                       insetForSectionAt section: Int) -> UIEdgeInsets
+            {
+                return sectionInsets
+            }
+            
+            public func collectionView(_ collectionView: UICollectionView,
+                                       layout collectionViewLayout: UICollectionViewLayout,
+                                       minimumLineSpacingForSectionAt section: Int) -> CGFloat
+            {
+                return sectionInsets.left
+            }
+
+//        // Uncomment the following line to preserve selection between presentations
+//        // self.clearsSelectionOnViewWillAppear = false
+//
+//        // Register cell classes
+//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//
+//        // Do any additional setup after loading the view.
+//        }
+//        //MARK: - Navigation
 
 
-        //MARK: UICollectionViewDataSource
 
-        public override func numberOfSections(in collectionView: UICollectionView)->Int
-        {
-        return 1
-        }
 
-        public override func collectionView(_ collectionView:UICollectionView, numberOfItemsInSection section: Int) -> Int
-        {
-        return ceativeCS.count
-        }
-        public override func collectionView(_ collectionView: UICollectionView,
-                            cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
-        {
-        let artCell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ArtCell
-        artCell.backgroundColor = .purple
-        artCell.artImage.image = creativeCS[indexPath.row]
-        artCell.artLabel.text = labels[indexPath.row]
 
-        return artCell
-        }
-
-        //MARK: UICollectionViewDelegate
-        public func collectionView(_ collectionView:UICollectionView,
-                   layout collectionViewLayout: UICollectionViewLayout,
-                   sizeForItemAt indexPath: IndexPath) -> CGSize
-        {
-        let paddingSpace = sectionInsets.left * (itemsPerRowCompact + 1)
-        let availableWidth = view.frame.width - paddingSpace
-        let widthPerItem = availableWidth/ itemsPerRowCompact
-        return CGSize(width: widthPerItem, height: widthPerItem)
-
-        }
-
-        public func collectionView(_ collectionView: UICollectionView,
-                   layout collectionViewLayout: UICollectionViewLayout,
-                   insetForSectionAt section: Int) -> UIEdgeInsets
-        {
-        return sectionInsets
-        }
-
-        public func collectionView(_ collectionView: UICollectionView,
-                   layout collectionViewLayout: UICollectionViewLayout,
-                   minimumLineSpacingForSectionAt section: Int) -> CGFloat
-        {
-        return sectionInsets.left
-        }

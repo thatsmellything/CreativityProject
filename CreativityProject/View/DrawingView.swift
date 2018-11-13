@@ -20,7 +20,9 @@ public class DrawingView : UIView
         createStickFigure().stroke()
         drawTurtle()
         peaceSign().stroke()
+        paintWImage()
     }
+    
     
     
     private func createStickFigure() -> UIBezierPath
@@ -84,6 +86,22 @@ public class DrawingView : UIView
         
         
         return peace
+    }
+    
+    private func paintWImage() -> Void
+    {
+        let bobRoss : UIBezierPath = UIBezierPath()
+        UIColor(patternImage : UIImage(named: "deer")!).setFill()
+        UIColor.green.setStroke()
+        bobRoss.lineWidth = 1.4
+        
+        bobRoss.move(to: CGPoint(x:150, y: 40))
+        bobRoss.addLine(to: CGPoint(x: 75, y: 200))
+        bobRoss.addLine(to: CGPoint(x: 50, y: 200))
+        bobRoss.addLine(to: CGPoint(x: 0, y: 50))
+        bobRoss.close()
+        bobRoss.stroke()
+        bobRoss.fill()
     }
 
 }
