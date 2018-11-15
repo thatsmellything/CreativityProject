@@ -80,6 +80,26 @@
             }
             
             //MARK: UICollectionViewDelegate
+            public override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indesPath: IndexPath)
+            {
+                let imageView = UIImageView(image: creativeCS(indexPath.row))
+                imageView.frame = self.view.frame
+                imageView.backgroundColor = .black
+                imageView.contentMode = .scaleAspectFit
+                imageView.isUserInteractionEnabled = true
+                
+                let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+                imageView.addGesstureRecognizer(tap)
+                
+                self.view.addSubview(imageView)
+            }
+            //Use to go back from full mode
+            @objc
+            private func dismissFullscreenImage(_ sender: UITapGestureRecognizer)
+            {
+                sender.view?.removeFromSuperview()
+            }
+            
             public func collectionView(_ collectionView:UICollectionView,
                                        layout collectionViewLayout: UICollectionViewLayout,
                                        sizeForItemAt indexPath: IndexPath) -> CGSize
@@ -103,6 +123,7 @@
             {
                 return sectionInsets.left
             }
+
 
 //        // Uncomment the following line to preserve selection between presentations
 //        // self.clearsSelectionOnViewWillAppear = false
